@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eghaziri <eghaziri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/17 00:01:35 by eghaziri          #+#    #+#             */
-/*   Updated: 2024/06/17 01:16:29 by eghaziri         ###   ########.fr       */
+/*   Created: 2024/06/17 02:06:07 by eghaziri          #+#    #+#             */
+/*   Updated: 2024/06/17 02:14:54 by eghaziri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+static void	s_zero(void *s, size_t n)
 {
-	while (*(unsigned char *)s1 == *(unsigned char *)s2 && s1 && s2 && n > 0)
-	{
-		s1++;
-		s2++;
-		n--;
-	}
-	if (n == 0)
-		return (0);
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	while (n--)
+		*(unsigned char *)s++ = 0;
+}
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*ptr;
+
+	if (nmemb && size && nmemb > (2000000000 / size))
+		return (NULL);
+	ptr = (void *)malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	s_zero(ptr, nmemb * size);
+	return (ptr);
 }
