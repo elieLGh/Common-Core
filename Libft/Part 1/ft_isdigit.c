@@ -6,13 +6,13 @@
 /*   By: eghaziri <eghaziri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 15:30:31 by eghaziri          #+#    #+#             */
-/*   Updated: 2024/06/16 15:30:31 by eghaziri         ###   ########.fr       */
+/*   Updated: 2024/06/16 17:07:15 by eghaziri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }

@@ -6,7 +6,7 @@
 /*   By: eghaziri <eghaziri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 15:36:09 by eghaziri          #+#    #+#             */
-/*   Updated: 2024/06/16 15:36:09 by eghaziri         ###   ########.fr       */
+/*   Updated: 2024/06/16 17:14:14 by eghaziri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
