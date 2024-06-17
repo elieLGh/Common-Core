@@ -6,7 +6,7 @@
 /*   By: eghaziri <eghaziri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:17:07 by eghaziri          #+#    #+#             */
-/*   Updated: 2024/06/16 20:20:32 by eghaziri         ###   ########.fr       */
+/*   Updated: 2024/06/17 16:29:24 by eghaziri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
-'
-void	*ft_memset(void *s, int c, size_t n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((usnigned char *)s)[i] = (usnigned char)c;
-	}
-	return (s);
-}
-'

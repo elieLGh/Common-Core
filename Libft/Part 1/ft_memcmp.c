@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eghaziri <eghaziri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/17 02:06:07 by eghaziri          #+#    #+#             */
-/*   Updated: 2024/06/17 16:51:21 by eghaziri         ###   ########.fr       */
+/*   Created: 2024/06/17 16:48:01 by eghaziri          #+#    #+#             */
+/*   Updated: 2024/06/17 16:56:40 by eghaziri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	s_zero(void *s, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (n--)
-		*(unsigned char *)s++ = 0;
-}
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*ptr;
-
-	if (nmemb && size && nmemb > (2000000000 / size))
-		return (NULL);
-	ptr = (void *)malloc(nmemb * size);
-	if (!ptr)
-		return (NULL);
-	s_zero(ptr, nmemb * size);
-	return (ptr);
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+	if (!n)
+		return (0);
+	while (i < n && *(str1 + i) == *(str2 + i))
+		i++;
+	if (i == n)
+		return (0);
+	return (*(str1 + i) - *(str2 + i));
 }
