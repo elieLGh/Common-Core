@@ -6,7 +6,7 @@
 /*   By: eghaziri <eghaziri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/23 02:11:27 by eghaziri          #+#    #+#             */
-/*   Updated: 2024/07/17 14:31:50 by eghaziri         ###   ########.fr       */
+/*   Updated: 2024/07/17 14:34:06 by eghaziri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	s;
-	size_t	e;s
+	size_t	e;
 	size_t	i;
 
 	s = 0;
